@@ -1,0 +1,13 @@
+.idea
+*.jugger.dart
+*.freezed.dart
+.metadata
+*.g.dart
+/tdlib
+
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+pubspec.lock
