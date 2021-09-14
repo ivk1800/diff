@@ -1,0 +1,9 @@
+name: tile
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.12.0-0 <3.0.0"
+
+dev_dependencies:
+  diff_lint_rules:
+    path: ../diff_lint_rules

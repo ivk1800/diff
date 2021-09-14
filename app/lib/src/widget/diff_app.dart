@@ -1,3 +1,4 @@
+import 'package:app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -9,10 +10,11 @@ class DiffApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Diff',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const SizedBox.shrink(),
+      home: appComponent
+          .getFeatureProvider()
+          .workspaceFeatureApi
+          .workspaceScreenFactory
+          .create(),
     );
   }
 }

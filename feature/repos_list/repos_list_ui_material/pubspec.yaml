@@ -1,0 +1,25 @@
+name: repos_list_ui_material
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.12.0-0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  core_arch_flutter:
+    path: ../../../core_arch_flutter
+  feature_repos_list_api:
+    path: ../feature_repos_list_api
+  flutter:
+    sdk: flutter
+  provider: 6.0.0
+  repos_list_presentation:
+    path: ../repos_list_presentation
+  tile_flutter:
+    path: ../../../tile_flutter
+
+dev_dependencies:
+  diff_lint_rules:
+    path: ../../../diff_lint_rules
+
+flutter:

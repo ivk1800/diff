@@ -14,4 +14,8 @@ function sync() {
 cd ..
 sync
 cd feature/
-sync
+for d in */; do
+  cd "${d}"
+  sync
+  cd ..
+done

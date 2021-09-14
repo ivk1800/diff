@@ -1,0 +1,27 @@
+name: workspace_ui_material
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.12.0-0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  core_arch_flutter:
+    path: ../../../core_arch_flutter
+  feature_commits_table_api:
+    path: ../../commits_table/feature_commits_table_api
+  feature_repos_list_api:
+    path: ../../repos_list/feature_repos_list_api
+  feature_workspace_api:
+    path: ../feature_workspace_api
+  flutter:
+    sdk: flutter
+  provider: 6.0.0
+  workspace_presentation:
+    path: ../workspace_presentation
+
+dev_dependencies:
+  diff_lint_rules:
+    path: ../../../diff_lint_rules
+
+flutter:
