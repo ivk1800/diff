@@ -1,6 +1,11 @@
-
-import 'package:tile_flutter/tile_flutter.dart';
+import 'package:tile/tile.dart';
 
 class RepoTileModel implements ITileModel {
-  const RepoTileModel();
+  const RepoTileModel({
+    required this.title,
+    required this.path,
+  });
+
+  final String path;
+  final String title;
 }

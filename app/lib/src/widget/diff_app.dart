@@ -5,9 +5,13 @@ import 'package:flutter/widgets.dart';
 class DiffApp extends StatelessWidget {
   const DiffApp({Key? key}) : super(key: key);
 
+  static final GlobalKey<NavigatorState> navigatorKey =
+      GlobalKey<NavigatorState>();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: navigatorKey,
       debugShowCheckedModeBanner: false,
       title: 'Diff',
       home: appComponent

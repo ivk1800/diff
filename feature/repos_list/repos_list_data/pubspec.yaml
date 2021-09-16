@@ -1,0 +1,17 @@
+name: repos_list_data
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.12.0-0 <3.0.0"
+
+dependencies:
+  json_annotation: 4.1.0
+  repos_list_domain:
+    path: ../repos_list_domain
+  shared_preferences: 2.0.7
+
+dev_dependencies:
+  build_runner: 2.1.1
+  diff_lint_rules:
+    path: ../../../diff_lint_rules
+  json_serializable: 5.0.0

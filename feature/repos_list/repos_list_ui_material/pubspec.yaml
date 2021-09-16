@@ -8,6 +8,8 @@ environment:
 dependencies:
   core_arch_flutter:
     path: ../../../core_arch_flutter
+  core_ui_material:
+    path: ../../../core_ui_material
   feature_repos_list_api:
     path: ../feature_repos_list_api
   flutter:
@@ -21,5 +23,3 @@ dependencies:
 dev_dependencies:
   diff_lint_rules:
     path: ../../../diff_lint_rules
-
-flutter:

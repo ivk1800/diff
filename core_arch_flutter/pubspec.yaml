@@ -8,6 +8,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: 6.0.0
 
 dev_dependencies:
   diff_lint_rules:

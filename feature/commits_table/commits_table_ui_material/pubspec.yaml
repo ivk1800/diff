@@ -14,7 +14,6 @@ dependencies:
     path: ../feature_commits_table_api
   flutter:
     sdk: flutter
-  path_provider: 2.0.1
 
 dev_dependencies:
   diff_lint_rules:

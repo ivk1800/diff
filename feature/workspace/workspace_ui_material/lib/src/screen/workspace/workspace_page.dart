@@ -9,8 +9,11 @@ class WorkspacePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      drawer: Drawer(
-        child: context.read<IReposListScreenFactory>().create(),
+      drawer: SizedBox(
+        width: 400,
+        child: Drawer(
+          child: context.read<IReposListScreenFactory>().create(),
+        ),
       ),
       body: const Center(
         child: Text('Workspace'),
