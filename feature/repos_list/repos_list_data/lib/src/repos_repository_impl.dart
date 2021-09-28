@@ -1,5 +1,5 @@
 import 'dart:convert';
-
+import 'package:collection/collection.dart';
 import 'package:repos_list_data/src/repo_entity.dart';
 import 'package:repos_list_data/src/repos_entity.dart';
 import 'package:repos_list_domain/repos_list_domain.dart';
@@ -21,9 +21,7 @@ class ReposRepositoryImpl implements IReposRepository {
 
   @override
   Future<List<Repo>> get allRepos async {
-    return _read()
-        .map((RepoEntity e) => Repo(path: e.path, name: e.name))
-        .toList();
+    return _read().map((RepoEntity e) => e.toRepo()).toList();
   }
 
   @override
@@ -32,6 +30,13 @@ class ReposRepositoryImpl implements IReposRepository {
     final int length = repos.length;
     _write(repos..removeWhere((RepoEntity element) => element.path == path));
     return repos.length != length;
+  }
+
+  @override
+  Future<Repo?> get(String path) async {
+    return _read()
+        .firstWhereOrNull((RepoEntity element) => element.path == path)
+        ?.toRepo();
   }
 
   void _write(List<RepoEntity> value) {
@@ -50,4 +55,8 @@ class ReposRepositoryImpl implements IReposRepository {
 
     return ReposEntity.fromJson(jsonDecode(json) as Map<String, dynamic>).repos;
   }
+}
+
+extension _RepoExt on RepoEntity {
+  Repo toRepo() => Repo(path: path, name: name);
 }

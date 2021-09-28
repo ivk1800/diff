@@ -6,14 +6,16 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  feature_commits_table_api:
-    path: ../../commits_table/feature_commits_table_api
+  feature_commits_list_api:
+    path: ../../commits_list/feature_commits_list_api
   feature_repos_list_api:
     path: ../../repos_list/feature_repos_list_api
   feature_workspace_api:
     path: ../feature_workspace_api
   flutter:
     sdk: flutter
+  workspace_presentation:
+    path: ../workspace_presentation
   workspace_ui_material:
     path: ../workspace_ui_material
 

@@ -1,9 +1,10 @@
 library feature_workspace_impl;
 
-import 'package:feature_commits_table_api/feature_commits_table_api.dart';
+import 'package:feature_commits_list_api/feature_commits_list_api.dart';
 import 'package:feature_repos_list_api/feature_repos_list_api.dart';
 import 'package:feature_workspace_api/feature_workspace_api.dart';
-import 'package:workspace_ui_material/workspace_ui_material.dart';
+
+import 'screen/workspace/workspace_screen_factory.dart';
 
 class WorkspaceFeatureApi implements IWorkspaceFeatureApi {
   WorkspaceFeatureApi({
@@ -28,7 +29,7 @@ class WorkspaceFeatureDependencies {
     required this.reposListScreenFactory,
   });
 
-  final ICommitsTableScreenFactory commitsTableScreenFactory;
+  final ICommitsListScreenFactory commitsTableScreenFactory;
 
   final IReposListScreenFactory reposListScreenFactory;
 }

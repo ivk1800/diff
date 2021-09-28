@@ -6,10 +6,10 @@ environment:
   sdk: ">=2.12.0-0 <3.0.0"
 
 dependencies:
-  feature_commits_table_api:
-    path: ../feature/commits_table/feature_commits_table_api
-  feature_commits_table_impl:
-    path: ../feature/commits_table/feature_commits_table_impl
+  feature_commits_list_api:
+    path: ../feature/commits_list/feature_commits_list_api
+  feature_commits_list_impl:
+    path: ../feature/commits_list/feature_commits_list_impl
   feature_repos_list_api:
     path: ../feature/repos_list/feature_repos_list_api
   feature_repos_list_impl:

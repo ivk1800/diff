@@ -1,6 +1,6 @@
 import 'package:app/src/navigation/application_router.dart';
-import 'package:feature_commits_table_api/feature_commits_table_api.dart';
-import 'package:feature_commits_table_impl/feature_commits_table_impl.dart';
+import 'package:feature_commits_list_api/feature_commits_list_api.dart';
+import 'package:feature_commits_list_impl/feature_commits_list_impl.dart';
 import 'package:feature_repos_list_api/feature_repos_list_api.dart';
 import 'package:feature_repos_list_impl/feature_repos_list_impl.dart';
 import 'package:feature_workspace_api/feature_workspace_api.dart';
@@ -22,8 +22,8 @@ abstract class FeatureModule {
       );
 
   @j.provide
-  static ICommitsTableFeatureApi provideCommitsTableFeatureApi() =>
-      CommitsTableFeatureApi();
+  static ICommitsListFeatureApi provideCommitsListFeatureApi() =>
+      CommitsListFeatureApi();
 
   @j.provide
   static IReposListFeatureApi provideReposListFeatureApi(
@@ -43,13 +43,13 @@ abstract class FeatureModule {
 
   @j.provide
   static WorkspaceFeatureDependencies provideWorkspaceFeatureDependencies(
-    ICommitsTableFeatureApi commitsTableFeatureApi,
+    ICommitsListFeatureApi commitsListFeatureApi,
     IReposListFeatureApi reposListFeatureApi,
   ) =>
       WorkspaceFeatureDependencies(
         reposListScreenFactory: reposListFeatureApi.reposListScreenFactory,
         commitsTableScreenFactory:
-            commitsTableFeatureApi.workspaceScreenFactory,
+            commitsListFeatureApi.commitsListScreenFactory,
       );
 
   // todo replace by bind, ApplicationRouter provided from app component,

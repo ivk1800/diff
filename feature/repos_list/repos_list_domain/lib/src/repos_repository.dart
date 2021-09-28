@@ -5,5 +5,7 @@ abstract class IReposRepository {
 
   Future<void> add(String path);
 
+  Future<Repo?> get(String path);
+
   Future<bool> remove(String path);
 }

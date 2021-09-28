@@ -1,5 +1,5 @@
 import 'package:app/src/di/module/feature_module.dart';
-import 'package:feature_commits_table_api/feature_commits_table_api.dart';
+import 'package:feature_commits_list_api/feature_commits_list_api.dart';
 import 'package:feature_repos_list_api/feature_repos_list_api.dart';
 import 'package:feature_workspace_api/feature_workspace_api.dart';
 import 'package:jugger/jugger.dart' as j;
@@ -10,7 +10,7 @@ import 'app_component.dart';
 abstract class FeatureComponent {
   IWorkspaceFeatureApi getWorkspaceFeatureApi();
 
-  ICommitsTableFeatureApi getCommitsTableFeatureApi();
+  ICommitsListFeatureApi getCommitsListFeatureApi();
 
   IReposListFeatureApi getReposListFeatureApi();
 }

@@ -21,6 +21,9 @@ class ReposListInteractor {
     _refreshSubject.add(null);
   }
 
+  Future<bool> isRepoExist(String path) async =>
+      await _reposRepository.get(path) != null;
+
   Future<void> remove(String path) async {
     final bool isRemoved = await _reposRepository.remove(path);
     if (isRemoved) {
